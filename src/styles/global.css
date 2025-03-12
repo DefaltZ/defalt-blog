@@ -40,7 +40,7 @@ body {
 	background-size: 100% 600px;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
-	color: rgb(var(--gray-dark));
+	color: rgb(186, 190, 194);
 	font-size: 20px;
 	line-height: 1.7;
 }
@@ -87,6 +87,11 @@ a:hover {
 }
 p {
 	margin-bottom: 1em;
+	
+}
+
+b {
+	color: #fff;
 }
 .prose p {
 	margin-bottom: 2em;
