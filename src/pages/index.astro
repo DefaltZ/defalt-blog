@@ -3,16 +3,28 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import SpinningCube from '../components/SpinningCube.vue';
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			.cube-container {
+				width: 100%;
+				height: 300px;
+				margin: 2em 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
+			
 			<h1>🧑‍🚀 Hello!</h1>
 			<p>
 				Welcome to my official devblog, for starters I am an undergrad English Honours student with a background
@@ -29,13 +41,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				<li>Proficiency in Python and Javascript Development</li>
 				<li>strong expertise in research, prompt engineering, English proficiency, writing documentation, business communication</li>
 			</p>
+			<br>
 			<b>My projects:</b>
 			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
+				<li>Debate Timekeeper project, built for the English Debating Society of my college</li>
 			</ul>
 			<p>
 				Have fun! If you get stuck, remember to
