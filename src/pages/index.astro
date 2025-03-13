@@ -1,9 +1,9 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-import SpinningCube from '../components/SpinningCube.vue';
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import SpinningCube from "../components/SpinningCube.vue";
 ---
 
 <!doctype html>
@@ -19,38 +19,89 @@ import SpinningCube from '../components/SpinningCube.vue';
 				justify-content: center;
 				align-items: center;
 			}
+
+			.container-body {
+				background-color: #3b3b5b;
+				border: 1px solid #333;
+				border-radius: 8px;
+				padding: 0;
+				margin: 20px auto;
+			}
+
+			.container-body b {
+				display: block;
+				background-color: #2a2a44;
+				padding: 15px 20px;
+				border-top-left-radius: 8px;
+				border-top-right-radius: 8px;
+				border-bottom: 1px solid #333;
+				margin: 0;
+			}
+
+			.container-body ul {
+				padding: 20px;
+				margin: 0;
+			}
 		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
-			
 			<h1>🧑‍🚀 Hello!</h1>
 			<p>
-				Welcome to my official devblog, for starters I am an undergrad English Honours student with a background
-				in programming, tech, research, finance and debates/public speaking. I started this blog to document my coding
-				journey: documenting code, talk about my building process, lessons learnt and braincells lost.
-				<br>
-				<i>Maybe the real Google Summer of Code internship was the buggy code messes I built along the way.</i>
+				Welcome to my official devblog, for starters I am an undergrad
+				English Honours student with a background in programming, tech,
+				research, finance and debates/public speaking. I started this
+				blog to document my coding journey: documenting code, talk about
+				my building process, lessons learnt and braincells lost.
+				<br />
+				<i
+					>Maybe the real Google Summer of Code internship was the
+					buggy code messes I built along the way.</i
+				>
 			</p>
-			<p>
+			<div class="container-body">
 				<b>My basic background:</b>
-				<li>Currently pursuing an English Honours degree, Delhi University</li>
-				<li>20 years old based out of New Delhi, India</li>
-				<li>Interested in open source development, Content writing, Documentation Engineering</li>
-				<li>Proficiency in Python and Javascript Development</li>
-				<li>strong expertise in research, prompt engineering, English proficiency, writing documentation, business communication</li>
+				<ul>
+					<li>
+						Currently pursuing an English Honours degree, Delhi
+						University
+					</li>
+					<li>20 years old based out of New Delhi, India</li>
+					<li>
+						Interested in open source development, Content writing,
+						Documentation Engineering
+					</li>
+					<li>Proficiency in Python and Javascript Development</li>
+					<li>
+						strong expertise in research, prompt engineering,
+						English proficiency, writing documentation, business
+						communication
+					</li>
+				</ul>
+			</div>
+
+			<div class="container-body">
+				<b>My projects:</b>
+				<ul>
+					<li>
+						Debate Timekeeper project, built for the English
+						Debating Society of my college
+					</li>
+					<li>This blog</li>
+					<li>Debate Notetaking software - Debbynote</li>
+					<li>My writing/research portfolio</li>
+				</ul>
+			</div>
+
+			<p>
+				<b
+					>Find my complete resume linked <a
+						href="https://drive.google.com/file/d/11MnkSXYOEhb1LapHWaml4ptGzzubEnAi/view?usp=sharing"
+						>here</a
+					>!</b
+				>
 			</p>
-			<br>
-			<b>My projects:</b>
-			<ul>
-				<li>Debate Timekeeper project, built for the English Debating Society of my college</li>
-				<li>This blog</li>
-				<li>Debate Notetaking software - Debbynote</li>
-				<li>My writing/research portfolio</li>
-			
-			</ul>
-			<p><b>Find my complete resume linked <a href="https://drive.google.com/file/d/11MnkSXYOEhb1LapHWaml4ptGzzubEnAi/view?usp=sharing">here</a>!</b></p>
 		</main>
 		<Footer />
 	</body>
