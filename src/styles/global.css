@@ -44,6 +44,15 @@ body {
 	font-size: 20px;
 	line-height: 1.7;
 }
+
+.container-body {
+	background-color: #1a1a1a;  /* Dark background color - adjust as needed */
+	border: 1px solid #333;     /* Border color - adjust as needed */
+	border-radius: 8px;         /* Optional: rounded corners */
+	padding: 20px;             /* Add some inner spacing */
+	margin: 20px auto;         /* Center the container with some vertical spacing */
+}
+
 main {
 	width: 720px;
 	max-width: calc(100% - 2em);

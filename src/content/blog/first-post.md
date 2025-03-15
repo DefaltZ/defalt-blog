@@ -37,5 +37,3 @@ My first exposure to astro was through this [youtube video](https://youtu.be/3_J
 <B>Thanking myself (no narcissism intended)</B>
 
 I thank my decision to aspire to apply for Google Summer of Code because it began a very important self betterment routine regarding one of my prime hobbies that I would have probably not fixed otherwise. I see a lot of people shocked around me when I tell them that I as an English Major have a coding background. It is also a regular stigma around the industry that only STEM background people can be successful in this industry. I am not any senior developer to give a definitive opinion, but being a part of several huge developer communities and interacting with people with similar backgrounds to me, I can definitely opiniate that learning programming and making it in the field is all about your interest, developing routines, discipline, constantly learning and being creative with what you have, and these are all assymetric to whatever background you come from. I am willing to break barriers I do not care about simply because I love the art that is coding. 
-
-
