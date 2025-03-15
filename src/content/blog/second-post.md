@@ -23,7 +23,7 @@ To folks from south asian economies like India, Bangladesh, Malaysia, Korea etc.
 
 ### What is Debbynote
 
-![debbynote dark mode](/public/debbynote%20dark%20mode.png)
+![debbynote dark mode](https://raw.githubusercontent.com/DefaltZ/debbynote/refs/heads/main/assets/debbynote%20dark%20mode.png)
 
 Notetaking is a very important cornerstone of debating. Tracking opposition arguments, highlighting important points, rebuttals etc. is an important and meticulous task especially for the adjudicators and judges. [Debbynote](https://github.com/DefaltZ/debbynote) caters to people who use digital notes for this process and also makes it easier for people who use paper notes to transition to digital notes with user friendliness and accessibility. 
 
