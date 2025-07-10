@@ -1,0 +1,236 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE } from "../consts";
+
+const projects = [
+	{
+		title: "Markdown Editor for Debate Notetaking",
+		description: "Built a modern markdown editor with extended syntax for debate notetaking",
+		technologies: ["Electron", "React", "Tailwind CSS", "TypeScript"],
+		category: "Open Source Development",
+		link: "https://github.com/DefaltZ/Debbynote",
+		image: "/blog-placeholder-1.jpg"
+	},
+	{
+		title: "D3FALT's astro blog",
+		description: "A blog to document my journey as an open source developer and Technical writer, with a lot of other discourse and subjects",
+		technologies: ["Astro", "Tailwind CSS", "Vercel"],
+		category: "Open Source Development",
+		link: "https://github.com/DefaltZ/defalt-blog",
+		image: "/blog-placeholder-2.jpg"
+	},
+	{
+		title: "Data Centre Market in India - Industry Research Report",
+		description: "Curated a comprehensive industry report on the data centre market in India, including market size, growth trends, and key players, as part of a project under the Finance and Investment Cell of my college.",
+		technologies: ["Google Docs", "Markdown", "Google Sheets"],
+		category: "Technical Writing",
+		link: "https://www.linkedin.com/posts/fic-arsd_descriptive-report-on-data-centre-industry-activity-7326946640081117184-o1a2/",
+		image: "/blog-placeholder-3.jpg"
+	},
+	{
+		title: "Challenges of legal liabilities in outer space exploration",
+		description: "Co-authored an ISSN indexed paper on the challenges of legal liabilities in outer space exploration, strong showcase of my research and literature review skills ",
+		technologies: ["Pages", "Google Docs", "Zotero"],
+		category: "Technical Writing",
+		link: "https://ijlmh.com/paper/challenges-of-legal-liability-in-outer-space-exploration/",
+		image: "/blog-placeholder-4.jpg"
+	},
+	{
+		title: "Self Defence in International Law",
+		description: "Co-authored an ISSN indexed paper on international law regarding the interpretation of self defence and the extent of its legitimacy, showcasing my research and literature review skills",
+		technologies: ["Pages", "Google Docs", "Zotero"],
+		category: "Technical Writing",
+		link: "https://jlrjs.com/archives/volume-3/issue-2/",
+		image: "/blog-placeholder-5.jpg"
+	},
+	
+];
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`Projects - ${SITE_TITLE}`} description="Portfolio of D3FALT's projects in open source development, technical writing, and SEO strategy." />
+		<style>
+			.projects-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+				gap: 2em;
+				margin: 2em 0;
+			}
+
+			.project-card {
+				background-color: #3b3b5b;
+				border: 1px solid #333;
+				border-radius: 8px;
+				overflow: hidden;
+				transition: transform 0.2s ease, box-shadow 0.2s ease;
+			}
+
+			.project-card:hover {
+				transform: translateY(-4px);
+				box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+			}
+
+			.project-image {
+				width: 100%;
+				height: 200px;
+				object-fit: cover;
+			}
+
+			.project-content {
+				padding: 1.5em;
+			}
+
+			.project-title {
+				color: #fff;
+				margin: 0 0 0.5em 0;
+				font-size: 1.3em;
+			}
+
+			.project-category {
+				background-color: #2a2a44;
+				color: #888;
+				padding: 0.3em 0.8em;
+				border-radius: 4px;
+				font-size: 0.8em;
+				display: inline-block;
+				margin-bottom: 1em;
+			}
+
+			.project-description {
+				color: rgb(186, 190, 194);
+				line-height: 1.6;
+				margin-bottom: 1em;
+				font-size: 0.95em;
+			}
+
+			.project-technologies {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.5em;
+				margin-bottom: 1em;
+			}
+
+			.tech-tag {
+				background-color: #2a2a44;
+				color: #aaa;
+				padding: 0.2em 0.6em;
+				border-radius: 3px;
+				font-size: 0.8em;
+				border: 1px solid #333;
+			}
+
+			.project-link {
+				color: var(--accent);
+				text-decoration: none;
+				font-weight: bold;
+				font-size: 0.9em;
+			}
+
+			.project-link:hover {
+				text-decoration: underline;
+			}
+
+			.category-filter {
+				margin: 2em 0;
+				display: flex;
+				gap: 1em;
+				flex-wrap: wrap;
+			}
+
+			.filter-btn {
+				background-color: #3b3b5b;
+				border: 1px solid #333;
+				color: rgb(186, 190, 194);
+				padding: 0.5em 1em;
+				border-radius: 4px;
+				cursor: pointer;
+				transition: all 0.2s ease;
+			}
+
+			.filter-btn:hover,
+			.filter-btn.active {
+				background-color: var(--accent);
+				color: white;
+				border-color: var(--accent);
+			}
+
+			@media (max-width: 720px) {
+				.projects-grid {
+					grid-template-columns: 1fr;
+					gap: 1.5em;
+				}
+				
+				.category-filter {
+					justify-content: center;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Projects</h1>
+			<p>
+				Here's a showcase of my work across different domains - from open source development 
+				to technical writing. Each project represents a unique challenge and solution tailored to specific client needs.
+				I have many more projects that I'm not listing here, but they will be up soon.
+			</p>
+
+			<div class="category-filter">
+				<button class="filter-btn active" data-category="all">All Projects</button>
+				<button class="filter-btn" data-category="Open Source Development">Open Source</button>
+				<button class="filter-btn" data-category="Technical Writing">Technical Writing</button>
+				<button class="filter-btn" data-category="SEO & Content Strategy">SEO & Content</button>
+			</div>
+
+			<div class="projects-grid">
+				{projects.map((project) => (
+					<div class="project-card" data-category={project.category}>
+						<img src={project.image} alt={project.title} class="project-image" />
+						<div class="project-content">
+							<div class="project-category">{project.category}</div>
+							<h3 class="project-title">{project.title}</h3>
+							<p class="project-description">{project.description}</p>
+							<div class="project-technologies">
+								{project.technologies.map((tech) => (
+									<span class="tech-tag">{tech}</span>
+								))}
+							</div>
+							<a href={project.link} class="project-link">View Project →</a>
+						</div>
+					</div>
+				))}
+			</div>
+		</main>
+		<Footer />
+
+		<script>
+			// Simple filter functionality
+			const filterBtns = document.querySelectorAll('.filter-btn');
+			const projectCards = document.querySelectorAll('.project-card');
+
+			filterBtns.forEach(btn => {
+				btn.addEventListener('click', () => {
+					const category = btn.dataset.category;
+					
+					// Update active button
+					filterBtns.forEach(b => b.classList.remove('active'));
+					btn.classList.add('active');
+					
+					// Filter projects
+					projectCards.forEach(card => {
+						if (category === 'all' || card.dataset.category === category) {
+							card.style.display = 'block';
+						} else {
+							card.style.display = 'none';
+						}
+					});
+				});
+			});
+		</script>
+	</body>
+</html> 
